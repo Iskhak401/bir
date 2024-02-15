@@ -29,3 +29,13 @@ resource "aws_vpc" "in-main2" {
     Name = "YES"
   }
 }
+
+resource "aws_vpc" "in-main3" {
+  cidr_block       = "10.0.0.0/16"
+  instance_tenancy = "default"
+
+  tags = {
+    Name = "YES"
+  }
+}
+
