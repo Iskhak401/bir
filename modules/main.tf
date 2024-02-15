@@ -147,3 +147,13 @@ resource "aws_acm_certificate" "in-main" {
     create_before_destroy = true
   }
 }
+
+
+resource "aws_vpc" "FINALLLL" {
+  cidr_block       = "10.0.0.0/16"
+  instance_tenancy = "default"
+
+  tags = {
+    Name = "YES"
+  }
+}
