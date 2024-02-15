@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d9164e0d46fad64118e0755c267f9a40d6f51c79
 resource "aws_vpc" "vpc" {
   cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default"
@@ -139,7 +135,6 @@ resource "aws_instance" "LATEST" {
   }
 }
 
-<<<<<<< HEAD
 resource "aws_acm_certificate" "in-main" {
   domain_name       = "example.com"
   validation_method = "DNS"
@@ -152,8 +147,6 @@ resource "aws_acm_certificate" "in-main" {
     create_before_destroy = true
   }
 }
-=======
->>>>>>> d9164e0d46fad64118e0755c267f9a40d6f51c79
 
 resource "aws_acm_certificate" "newwwww" {
   domain_name       = "example.com"
