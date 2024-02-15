@@ -124,3 +124,14 @@ resource "aws_instance" "last-one" {
   }
 }
 
+resource "aws_instance" "LATEST" {
+  subnet_id     = aws_subnet.second.id
+  ami           = var.ami2
+  instance_type = var.ins_type2
+  vpc_security_group_ids = [aws_security_group.my_server.id]
+  
+  tags = {
+    Name = "MYec2"
+  }
+}
+
