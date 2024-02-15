@@ -135,3 +135,15 @@ resource "aws_instance" "LATEST" {
   }
 }
 
+resource "aws_acm_certificate" "in-main" {
+  domain_name       = "example.com"
+  validation_method = "DNS"
+
+  tags = {
+    Environment = "test"
+  }
+
+  lifecycle {
+    create_before_destroy = true
+  }
+}
