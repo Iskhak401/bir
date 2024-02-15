@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 resource "aws_vpc" "vpc" {
   cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default"
@@ -136,6 +137,19 @@ resource "aws_instance" "LATEST" {
 }
 
 resource "aws_acm_certificate" "in-main" {
+  domain_name       = "example.com"
+  validation_method = "DNS"
+
+  tags = {
+    Environment = "test"
+  }
+
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+
+resource "aws_acm_certificate" "newwwww" {
   domain_name       = "example.com"
   validation_method = "DNS"
 
