@@ -39,6 +39,7 @@ resource "aws_vpc" "in-main3" {
   }
 }
 
+
 resource "aws_vpc" "in-practice" {
   cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default"
