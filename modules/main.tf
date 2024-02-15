@@ -113,16 +113,4 @@ resource "aws_acm_certificate" "cert" {
   }
 }
 
-resource "aws_acm_certificate" "jany" {
-  domain_name       = "example.com"
-  validation_method = "DNS"
-
-  tags = {
-    Environment = "test"
-  }
-
-  lifecycle {
-    create_before_destroy = true
-  }
-}
 
